@@ -58,7 +58,7 @@ router.get("/spotify/callback", async (req, res) => {
 
   const accessToken = tokenResponse.data.access_token;
 
-  res.redirect(`${process.env.FRONTEND_URL}/?token=${accessToken}`);
+  res.redirect(`https://moodify-ui-5r1k.vercel.app/?token=${accessToken}`);
 });
 
 export default router;
