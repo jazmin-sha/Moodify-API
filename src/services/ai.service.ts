@@ -42,7 +42,10 @@ Rules:
       },
     },
   );
-
+  console.log(
+    "OPENROUTER:",
+    process.env.OPENROUTER_API_KEY ? "FOUND" : "MISSING",
+  );
   const content = response.data.choices[0].message.content;
 
   const cleanedContent = content

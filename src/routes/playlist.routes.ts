@@ -130,6 +130,8 @@ router.post("/generate", async (req, res) => {
       added: addResponse.data,
     });
   } catch (error: any) {
+    console.log("FULL ERROR:", error.response?.data || error.message);
+
     res.status(500).json({
       error: error.message,
     });
